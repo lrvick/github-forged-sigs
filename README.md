@@ -15,8 +15,8 @@ sensitive code, you could simply check out the code, verify signatures, and
 review/merge on your own local system as Torvalds intended. Then you don't
 actually need to trust GitHub at all, which is a major security win.
 
-Further say you want to prove that all commits and merge commits can't be made
-by stolen by remote actors via a compromised endpoint or similar.
+Further say you want to prove that signed commits and merge commits can't be
+made via keys stolen by remote actors from a compromised endpoint or similar.
 
 For even better security you can ensure everyone on your team maintains their
 signing keys exclusively on hardware security modules like yubikeys, so even
@@ -117,7 +117,7 @@ in a Google interface somewhere.
 
 Design flaws like these demonstrates GitHub misunderstands the threat models
 and assumptions around commit signing and verification and overloaded the
-meaning of the green lock in the web interface breaking git and GPG
+meaning of the green "verified" in the web interface breaking git and GPG
 compatibility in the process.
 
 It also means "only allow signed commits" in settings is not actually enforced.
