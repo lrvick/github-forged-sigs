@@ -72,7 +72,7 @@ $ https://github.com/lrvick.gpg | gpg --import
 $ gpg --list-keys 8E47A1EC35A1551D
 $ git clone https://github.com/lrvick/git-forged-sigs
 $ git log --show-signature ba89474
-commit ba89474 (HEAD -> feature-branch, origin/main, main)
+commit ba894740f484f0a4ff2832b415a2c6997aeff105
 gpg: Signature made Fri 06 Nov 2020 01:35:17 AM PST
 gpg:                using RSA key 67553FBDA46BB71ABD2E0B0B8E47A1EC35A1551D
 gpg: Good signature from "Lance R. Vick (Personal) <lance@lrvick.net>" [ultimate]
@@ -86,6 +86,28 @@ Date:   Fri Nov 6 01:35:17 2020 -0800
 
 The merge commit that added this PR to master, will show as invalid in git
 using the above steps, but perfectly valid in the GitHub web interface.
+
+```
+commit 7e5c26d2a05d02181b4cbc7957a56a4dffde5c3d (HEAD -> main, origin/main)
+gpg: Signature made Fri 06 Nov 2020 02:41:56 AM PST
+gpg:                using RSA key 4AEE18F83AFDEB23
+gpg: requesting key 4AEE18F83AFDEB23 from hkp server keys.gnupg.net
+gpg: key 4AEE18F83AFDEB23: 1 duplicate signature removed
+gpg: key 4AEE18F83AFDEB23: public key "GitHub (web-flow commit signing) <noreply@github.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+gpg: Good signature from "GitHub (web-flow commit signing) <noreply@github.com>" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 5DE3 E050 9C47 EA3C F04A  42D3 4AEE 18F8 3AFD EB23
+Merge: ba89474 ad9647c
+Author: Lance R. Vick <lance@lrvick.net>
+Date:   Fri Nov 6 02:41:56 2020 -0800
+
+    Merge pull request #1 from lrvick/feature-branch
+
+    add initial draft
+```
 
 ## Conclusion
 
@@ -108,5 +130,5 @@ https://github.com/github/dmca/tree/25cdace60ac64788a4853d33d9fa48c5338f7249
 Git commit signing is the only tool we have to avoid issues like this, and it
 is broken.
 
-Github however has been aware of these issues for years and still
-has demonstrated no willingness to address them.
+Github however has been aware of these issues for years and still has
+demonstrated no willingness to address them.
