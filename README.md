@@ -43,7 +43,7 @@ Code merged via this method similarly gets the green "verified" tag.
 
 ## Problem
 
-The big greem merge button in PRs works even when your HSM is not inserted.
+The big green merge button in PRs works even when your HSM is not inserted.
 
 If the key only exists in an HSM, then how is it possible for Github to sign
 the merge commit?
