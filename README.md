@@ -21,7 +21,7 @@ made via keys stolen by remote actors from a compromised endpoint or similar.
 For even better security you can ensure everyone on your team maintains their
 signing keys exclusively on hardware security modules like yubikeys, so even
 if an endpoint is compromised, the key is never exposed to system memory, thus
-preventing a remote actor from being able to obtian it and use it elsewhere.
+preventing a remote actor from being able to obtain it and use it elsewhere.
 
 ## Implementation
 
