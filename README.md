@@ -68,7 +68,7 @@ to verify my commits.
 You can for example verify the root commit on this repo:
 
 ```
-$ https://github.com/lrvick.gpg | gpg --import
+$ curl https://github.com/lrvick.gpg | gpg --import
 $ gpg --list-keys 8E47A1EC35A1551D
 $ git clone https://github.com/lrvick/git-forged-sigs
 $ git log --show-signature ba89474
@@ -85,7 +85,10 @@ Date:   Fri Nov 6 01:35:17 2020 -0800
 ```
 
 The merge commit that added this PR to master, will show as invalid in git
-using the above steps, but perfectly valid in the GitHub web interface.
+using the above steps, but perfectly valid in the GitHub web interface which
+you can observe for yourself.
+
+One of these verifieds is not like the others: https://github.com/lrvick/github-forged-sigs/commits/main
 
 ```
 commit 7e5c26d2a05d02181b4cbc7957a56a4dffde5c3d (HEAD -> main, origin/main)
@@ -115,7 +118,7 @@ Imagine if Google started displaying domains as having valid HTTPS with a green
 lock in chrome even if they didn't have HTTPS at all, but just clicked a button
 in a Google interface somewhere.
 
-Design flaws like these demonstrates GitHub misunderstands the threat models
+Design flaws like these demonstrate GitHub misunderstands the threat models
 and assumptions around commit signing and verification and overloaded the
 meaning of the green "verified" in the web interface breaking git and GPG
 compatibility in the process.
