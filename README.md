@@ -138,20 +138,23 @@ demonstrated no willingness to address them.
 
 ## Recommendations
 
-1. Add spoofing protection
-  Disallow pushing of commits with emails that don't match the account
-  associated with the credentials used to push. Those that wish to push commits
-  on behalf of others should use --author or merge commits to make clear who
-  the actual author was, and who is committing on their behalf. I realize this
-  would be a problem for some workflows, but at least enable it by default for
-  repos and their forks and let users disable it if they wish.
+### Add spoofing protection
 
-2. Make "require signed commits" repo settings actually work.
-  Ensure all commits and merge commits are actually signed by the keys
-  registered to those users. Disable the green merge button in this mode as it
-  can't possibly work, and just creates confusion.
+Disallow pushing of commits with emails that don't match the account associated
+with the credentials used to push. Those that wish to push commits on behalf of
+others should use --author or merge commits to make clear who the actual author
+was, and who is committing on their behalf. I realize this would be a problem
+for some workflows, but at least enable it by default for repos and their forks
+and let users disable it if they wish.
 
-3. Distinctly show who was trusted in a commit.
-  Show web-based github-signed "verified" commits as clearly different in the
-  UI vs commits signed on someones local systems. These imply -very- different
-  things and different threat models.
+### Make "require signed commits" repo settings actually work.
+
+Ensure all commits and merge commits are actually signed by the keys registered
+to those users. Disable the green merge button in this mode as it can't
+possibly work, and just creates confusion.
+
+### Distinctly show who was trusted in a commit.
+
+Show web-based github-signed "verified" commits as different in the UI vs
+commits signed on someones local system with their actual private key. These
+imply -very- different threat models and must be clearly displayed as such.
